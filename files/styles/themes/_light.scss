@@ -1,0 +1,41 @@
+$main-color: #eb6464;
+$background: #f8f8f8;
+$text: #252525;
+$button: #ffffff;
+$shadow: 0 0 1.5rem 0 rgba(37, 37, 37, .25);
+
+.light {
+    .digital {
+        background-color: $background;
+        &__display {
+            &__clock {
+                &__digit__segment { background-color: $main-color }
+                &__separator {
+                    &::before, &::after { background-color: $main-color }
+                }
+            }
+            &__date {
+                * { color: $main-color }
+                &__day-nbr {
+                    color: $background;
+                    background-color: $main-color;
+                }
+            }
+        }
+        &__settings {
+            &__actions {
+                box-shadow: $shadow;
+                background-color: $button;
+                &__action {
+                    color: $text;
+                    &::before { background-color: $text }
+                }
+            }
+            &__toggle {
+                box-shadow: $shadow;
+                background-color: $button;
+                > ion-icon { color: $text }
+            }
+        }
+    }
+}

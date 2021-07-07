@@ -1,0 +1,413 @@
+@font-face {
+  font-weight: 300;
+  font-style: normal;
+  font-family: 'Ubuntu';
+  src: url("../../resources/fonts/Ubuntu-Light.woff") format("woff"), url("../../resources/fonts/Ubuntu-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: 300;
+  font-style: italic;
+  font-family: 'Ubuntu';
+  src: url("../../resources/fonts/Ubuntu-LightItalic.woff") format("woff"), url("../../resources/fonts/Ubuntu-LightItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Ubuntu';
+  src: url("../../resources/fonts/Ubuntu-Regular.woff") format("woff"), url("../../resources/fonts/Ubuntu-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: 400;
+  font-style: italic;
+  font-family: 'Ubuntu';
+  src: url("../../resources/fonts/Ubuntu-Italic.woff") format("woff"), url("../../resources/fonts/Ubuntu-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: 500;
+  font-style: normal;
+  font-family: 'Ubuntu';
+  src: url("../../resources/fonts/Ubuntu-Medium.woff") format("woff"), url("../../resources/fonts/Ubuntu-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: 500;
+  font-style: italic;
+  font-family: 'Ubuntu';
+  src: url("../../resources/fonts/Ubuntu-MediumItalic.woff") format("woff"), url("../../resources/fonts/Ubuntu-MediumItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: 700;
+  font-style: normal;
+  font-family: 'Ubuntu';
+  src: url("../../resources/fonts/Ubuntu-Bold.woff") format("woff"), url("../../resources/fonts/Ubuntu-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: 700;
+  font-style: italic;
+  font-family: 'Ubuntu';
+  src: url("../../resources/fonts/Ubuntu-BoldItalic.woff") format("woff"), url("../../resources/fonts/Ubuntu-BoldItalic.woff2") format("woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  line-height: 100%;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
+}
+
+.digital {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.digital * {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.digital__display {
+  gap: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.digital__display__clock {
+  gap: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.digital__display__clock__hours, .digital__display__clock__minutes {
+  gap: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.digital__display__clock__separator {
+  gap: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.digital__display__clock__separator::before, .digital__display__clock__separator::after {
+  content: '';
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.digital__display__clock__digit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.digital__display__clock__digit__line {
+  width: 14rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.digital__display__clock__digit__segment {
+  width: 2rem;
+  opacity: .1;
+  height: 10rem;
+  display: block;
+  border-radius: 1rem;
+}
+
+.digital__display__clock__digit__segment[state=true] {
+  opacity: 1;
+}
+
+.digital__display__clock__digit__segment.a, .digital__display__clock__digit__segment.d, .digital__display__clock__digit__segment.g {
+  width: 10rem;
+  height: 2rem;
+}
+
+.digital__display__date {
+  gap: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.digital__display__date * {
+  font-size: 2rem;
+}
+
+.digital__display__date__year {
+  font-weight: 700;
+}
+
+.digital__display__date__day-nbr {
+  padding: .5rem;
+  font-weight: 700;
+  border-radius: .5rem;
+}
+
+.digital__settings {
+  gap: 2rem;
+  left: 2rem;
+  bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.digital__settings__actions {
+  width: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: .5rem;
+  border-radius: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  -webkit-transform: translateX(calc(-3rem - 100%));
+          transform: translateX(calc(-3rem - 100%));
+}
+
+.digital__settings__actions.opened {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.digital__settings__actions__action {
+  gap: 1rem;
+  z-index: 1;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  padding: .5rem;
+}
+
+.digital__settings__actions__action > span, .digital__settings__actions__action > ion-icon {
+  pointer-events: none;
+}
+
+.digital__settings__actions__action > ion-icon {
+  font-size: 1rem;
+  -webkit-transition: -webkit-transform 200ms ease-out;
+  transition: -webkit-transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+}
+
+.digital__settings__actions__action::before {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: .5rem;
+  -webkit-transition: opacity 150ms ease-out;
+  transition: opacity 150ms ease-out;
+}
+
+.digital__settings__actions__action:hover > ion-icon {
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+
+.digital__settings__actions__action:hover::before {
+  opacity: .1;
+}
+
+.digital__settings__actions__action.theme-switcher {
+  text-transform: capitalize;
+}
+
+.digital__settings__toggle {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.digital__settings__toggle > ion-icon {
+  font-size: 1.5rem;
+  pointer-events: none;
+  -webkit-transition: -webkit-transform 200ms ease-out;
+  transition: -webkit-transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+}
+
+.digital__settings__toggle:hover > ion-icon {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.light .digital {
+  background-color: #f8f8f8;
+}
+
+.light .digital__display__clock__digit__segment {
+  background-color: #eb6464;
+}
+
+.light .digital__display__clock__separator::before, .light .digital__display__clock__separator::after {
+  background-color: #eb6464;
+}
+
+.light .digital__display__date * {
+  color: #eb6464;
+}
+
+.light .digital__display__date__day-nbr {
+  color: #f8f8f8;
+  background-color: #eb6464;
+}
+
+.light .digital__settings__actions {
+  -webkit-box-shadow: 0 0 1.5rem 0 rgba(37, 37, 37, 0.25);
+          box-shadow: 0 0 1.5rem 0 rgba(37, 37, 37, 0.25);
+  background-color: #ffffff;
+}
+
+.light .digital__settings__actions__action {
+  color: #252525;
+}
+
+.light .digital__settings__actions__action::before {
+  background-color: #252525;
+}
+
+.light .digital__settings__toggle {
+  -webkit-box-shadow: 0 0 1.5rem 0 rgba(37, 37, 37, 0.25);
+          box-shadow: 0 0 1.5rem 0 rgba(37, 37, 37, 0.25);
+  background-color: #ffffff;
+}
+
+.light .digital__settings__toggle > ion-icon {
+  color: #252525;
+}
+
+.dark .digital {
+  background-color: #252525;
+}
+
+.dark .digital__display__clock__digit__segment {
+  background-color: #a053cf;
+}
+
+.dark .digital__display__clock__separator::before, .dark .digital__display__clock__separator::after {
+  background-color: #a053cf;
+}
+
+.dark .digital__display__date * {
+  color: #a053cf;
+}
+
+.dark .digital__display__date__day-nbr {
+  color: #252525;
+  background-color: #a053cf;
+}
+
+.dark .digital__settings__actions {
+  -webkit-box-shadow: 0 0 1.5rem 0 rgba(160, 83, 207, 0.25);
+          box-shadow: 0 0 1.5rem 0 rgba(160, 83, 207, 0.25);
+  background-color: #171717;
+}
+
+.dark .digital__settings__actions__action {
+  color: #ffffff;
+}
+
+.dark .digital__settings__actions__action::before {
+  background-color: #ffffff;
+}
+
+.dark .digital__settings__toggle {
+  -webkit-box-shadow: 0 0 1.5rem 0 rgba(160, 83, 207, 0.25);
+          box-shadow: 0 0 1.5rem 0 rgba(160, 83, 207, 0.25);
+  background-color: #171717;
+}
+
+.dark .digital__settings__toggle > ion-icon {
+  color: #ffffff;
+}
+/*# sourceMappingURL=style.css.map */

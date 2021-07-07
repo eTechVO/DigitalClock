@@ -26,8 +26,10 @@
 
             &__separator {
                 gap: 4rem;
+                opacity: .1;
                 display: flex;
                 flex-direction: column;
+                animation: blink 750ms ease-in-out infinite alternate;
 
                 &::before, &::after {
                     content: '';

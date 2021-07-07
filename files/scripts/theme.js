@@ -2,9 +2,9 @@ import { $, checkCookie, getCookie, setCookie } from "./min.js"
 
 const defaultTheme = "light"
 const cookieName = "color-scheme"
-const themes = [ 'light', 'dark' ]
-const translates = [ 'light', 'dark' ]
-const icons = [ 'sunny-outline', 'moon-outline' ]
+const themes = [ 'light', 'dark', 'nature', 'oceanic', 'terminal' ]
+const translates = [ 'light', 'dark', 'nature', 'oceanic', 'terminal' ]
+const icons = [ 'sunny-outline', 'moon-outline', 'leaf-outline', 'water-outline', 'terminal-outline' ]
 const themeSwitcher = $(document, '.theme-switcher')
 
 

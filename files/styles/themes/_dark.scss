@@ -4,21 +4,26 @@ $text: #ffffff;
 $button: #171717;
 $shadow: 0 0 1.5rem 0 rgba(160, 83, 207, .25);
 
+.date.dark {
+    * { color: $main-color }
+    .number {
+        color: $background;
+        background-color: $main-color;
+    }
+}
 .dark {
     .segment { background-color: $main-color }
+    .temperature { color: $main-color }
+    .condition {
+        box-shadow: $shadow;
+        background-color: $button;
+    }
     .digital {
         background-color: $background;
         &__display {
             &__clock {
                 &__separator {
                     &::before, &::after { background-color: $main-color }
-                }
-            }
-            &__date {
-                * { color: $main-color }
-                &__day-nbr {
-                    color: $background;
-                    background-color: $main-color;
                 }
             }
         }

@@ -54,241 +54,38 @@
   src: url("../../resources/fonts/Ubuntu-BoldItalic.woff") format("woff"), url("../../resources/fonts/Ubuntu-BoldItalic.woff2") format("woff2");
 }
 
-@-webkit-keyframes blink {
-  0% {
-    opacity: .2;
-  }
-  75%, 100% {
-    opacity: 1;
-  }
-}
-
-@keyframes blink {
-  0% {
-    opacity: .2;
-  }
-  75%, 100% {
-    opacity: 1;
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
-  outline: none;
-  line-height: 100%;
-  position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Ubuntu' !important;
 }
 
-.digital {
-  width: 100%;
-  height: 100vh;
+.date {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.digital * {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.digital__display {
-  gap: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.digital__display__clock {
-  gap: 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  grid-gap: 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.digital__display__clock__hours, .digital__display__clock__minutes {
-  gap: 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.date > span {
+  display: block;
+  font-size: 2rem;
+  line-height: 100%;
 }
 
-.digital__display__clock__separator {
-  gap: 4rem;
-  opacity: .1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-animation: blink 750ms ease-in-out infinite alternate;
-          animation: blink 750ms ease-in-out infinite alternate;
-}
-
-.digital__display__clock__separator::before, .digital__display__clock__separator::after {
-  content: '';
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-}
-
-.digital__display__day-line {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.digital__settings {
-  gap: 2rem;
-  left: 2rem;
-  bottom: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.digital__settings__actions {
-  width: 10rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.date .number {
   padding: .5rem;
-  border-radius: 1rem;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-transition: -webkit-transform 300ms ease-in-out;
-  transition: -webkit-transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
-  -webkit-transform: translateX(calc(-3rem - 100%));
-          transform: translateX(calc(-3rem - 100%));
-}
-
-.digital__settings__actions.opened {
-  -webkit-transform: none;
-          transform: none;
-}
-
-.digital__settings__actions__action {
-  gap: 1rem;
-  z-index: 1;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  padding: .5rem;
-}
-
-.digital__settings__actions__action > span, .digital__settings__actions__action > ion-icon {
-  pointer-events: none;
-}
-
-.digital__settings__actions__action > ion-icon {
-  font-size: 1rem;
-  -webkit-transition: -webkit-transform 200ms ease-out;
-  transition: -webkit-transform 200ms ease-out;
-  transition: transform 200ms ease-out;
-  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
-}
-
-.digital__settings__actions__action::before {
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: -1;
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
+  font-weight: 700;
   border-radius: .5rem;
-  -webkit-transition: opacity 150ms ease-out;
-  transition: opacity 150ms ease-out;
 }
 
-.digital__settings__actions__action:hover > ion-icon {
-  -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
-}
-
-.digital__settings__actions__action:hover::before {
-  opacity: .1;
-}
-
-.digital__settings__actions__action.theme-switcher {
-  text-transform: capitalize;
-}
-
-.digital__settings__toggle {
-  width: 3rem;
-  height: 3rem;
-  border: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  border-radius: 50%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.digital__settings__toggle > ion-icon {
-  font-size: 1.5rem;
-  pointer-events: none;
-  -webkit-transition: -webkit-transform 200ms ease-out;
-  transition: -webkit-transform 200ms ease-out;
-  transition: transform 200ms ease-out;
-  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
-}
-
-.digital__settings__toggle:hover > ion-icon {
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
+.date .year {
+  font-weight: 700;
 }
 
 .date.light * {
@@ -565,4 +362,4 @@
 .terminal .digital__settings__toggle > ion-icon {
   color: #ffffff;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=date.css.map */

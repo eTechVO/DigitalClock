@@ -23,6 +23,8 @@ function setTheme(theme) {
     $(themeSwitcher, 'span').innerText = translates[ themeIndex ]
 
     $a(document, 'digit-display').forEach(dd => dd.setAttribute('theme', theme))
+    $(document, 'date-display').setAttribute('theme', theme)
+    $(document, 'weather-display').setAttribute('theme', theme)
 
     setCookie(cookieName, theme, 365)
 }

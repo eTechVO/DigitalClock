@@ -1,0 +1,41 @@
+@import "../utils/fonts";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 100%;
+    box-sizing: border-box;
+    font-family: 'Ubuntu' !important;
+}
+
+.weather {
+    display: flex;
+    grid-gap: 1rem;
+    align-items: center;
+}
+
+.condition {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    position: relative;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+
+    > img {
+        height: 2rem;
+    }
+}
+
+.temperature {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+@import "../themes/light";
+@import "../themes/dark";
+@import "../themes/nature";
+@import "../themes/oceanic";
+@import "../themes/terminal";

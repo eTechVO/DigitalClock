@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.digit {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &-line {
+        width: 14rem;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.segment {
+    width: 2rem;
+    opacity: .1;
+    height: 10rem;
+    display: block;
+    border-radius: 1rem;
+
+    &[state=true] { opacity: 1 }
+
+    &.a, &.g, &.d {
+        width: 10rem;
+        height: 2rem;
+    }
+}
+
+@import "../themes/light";
+@import "../themes/dark";
+@import "../themes/nature";
+@import "../themes/oceanic";
+@import "../themes/terminal";

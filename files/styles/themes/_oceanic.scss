@@ -5,6 +5,9 @@ $button: #191940;
 $shadow: 0 0 1.5rem 0 rgba(69, 179, 225, .25);
 
 .oceanic {
+    .segment { background-color: $main-color }
+
+    
     .digital {
         background-color: $background;
         &__display {

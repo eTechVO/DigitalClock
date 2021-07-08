@@ -1,27 +1,12 @@
 import { $, $a } from "./min.js"
 
-const hourTens = $(document, '.hours__tens')
-const hourUnits = $(document, '.hours__units')
-const minutesTens = $(document, '.minutes__tens')
-const minutesUnits = $(document, '.minutes__units')
+const digits = $a(document, 'digit-display')
+
 const dayDisplay = $(document, '.digital__display__date__day-name')
 const numberDisplay = $(document, '.digital__display__date__day-nbr')
 const monthDisplay = $(document, '.digital__display__date__month')
 const yearDisplay = $(document, '.digital__display__date__year')
 
-const converts = {
-    "0": [ true, true, true, true, true, true, false ],
-    "1": [ false, true, true, false, false, false, false ],
-    "2": [ true, true, false, true, true, false, true ],
-    "3": [ true, true, true, true, false, false, true ],
-    "4": [ false, true, true, false, false, true, true ],
-    "5": [ true, false, true, true, false, true, true ],
-    "6": [ true, false, true, true, true, true, true ],
-    "7": [ true, true, true, false, false, false, false ],
-    "8": [ true, true, true, true, true, true, true ],
-    "9": [ true, true, true, true, false, true, true ],
-}
-const segments = [ "a", "b", "c", "d", "e", "f", "g" ]
 const months = [
     "Janvier",
     "Février",
@@ -54,8 +39,8 @@ window.onload = () => {
 
 function loadDate() {
     const now = new Date()
-    const day = days[ now.toUTCString().substring(0, 3) ]
-    const number = now.toUTCString().substring(5, 7)
+    const day = days[ now.toDateString().substring(0, 3) ]
+    const number = now.toDateString().substring(8, 10)
     const month = months[now.getMonth()]
     const year = now.getFullYear()
 
@@ -68,16 +53,5 @@ function loadDate() {
     monthDisplay.innerText = month
     yearDisplay.innerText = year
 
-    convert(hourTens, time.charAt(0))
-    convert(hourUnits, time.charAt(1))
-    convert(minutesTens, time.charAt(2))
-    convert(minutesUnits, time.charAt(3))
-}
-
-function convert(elem, value) {
-    for (let i = 0; i < segments.length; i++) {
-        const seg = $(elem, '.' + segments[ i ])
-        const state = converts[ value ][ i ]
-        seg.setAttribute('state', state)
-    }
+    for (let i = 0; i < digits.length; i++) { digits[ i ].displayNumber(time.charAt( i )) }
 }

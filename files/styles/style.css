@@ -342,6 +342,10 @@
           transform: rotate(30deg);
 }
 
+.light .segment {
+  background-color: #eb6464;
+}
+
 .light .digital {
   background-color: #f8f8f8;
 }
@@ -385,6 +389,10 @@
 
 .light .digital__settings__toggle > ion-icon {
   color: #252525;
+}
+
+.dark .segment {
+  background-color: #a053cf;
 }
 
 .dark .digital {
@@ -432,6 +440,10 @@
   color: #ffffff;
 }
 
+.nature .segment {
+  background-color: #ec923f;
+}
+
 .nature .digital {
   background-color: #394b34;
 }
@@ -477,6 +489,10 @@
   color: #ffffff;
 }
 
+.oceanic .segment {
+  background-color: #45b3e1;
+}
+
 .oceanic .digital {
   background-color: #222249;
 }
@@ -520,6 +536,10 @@
 
 .oceanic .digital__settings__toggle > ion-icon {
   color: #ffffff;
+}
+
+.terminal .segment {
+  background-color: #a6e145;
 }
 
 .terminal .digital {

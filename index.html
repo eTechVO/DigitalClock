@@ -5,11 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <link rel="icon" href="favicon.ico" />
         <link rel="stylesheet" href="files/styles/style.css" />
 
         <script src="files/scripts/theme.js" type="module" defer></script>
         <script src="files/scripts/clock.js" type="module" defer></script>
         <script src="files/scripts/settings.js" type="module" defer></script>
+
+        <script src="files/scripts/7segments.js" type="module"></script>
 
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -18,65 +21,18 @@
     </head>
 
     <body>
+
         <main class="digital">
             <div class="digital__display">
                 <div class="digital__display__clock">
                     <div class="digital__display__clock__hours">
-                        <div class="digital__display__clock__digit hours__tens">
-                            <span class="digital__display__clock__digit__segment a" state="false"></span>
-                            <div class="digital__display__clock__digit__line">
-                                <span class="digital__display__clock__digit__segment f" state="false"></span>
-                                <span class="digital__display__clock__digit__segment b" state="false"></span>
-                            </div>
-                            <span class="digital__display__clock__digit__segment g" state="false"></span>
-                            <div class="digital__display__clock__digit__line">
-                                <span class="digital__display__clock__digit__segment e" state="false"></span>
-                                <span class="digital__display__clock__digit__segment c" state="false"></span>
-                            </div>
-                            <span class="digital__display__clock__digit__segment d" state="false"></span>
-                        </div>
-                        <div class="digital__display__clock__digit hours__units">
-                            <span class="digital__display__clock__digit__segment a" state="false"></span>
-                            <div class="digital__display__clock__digit__line">
-                                <span class="digital__display__clock__digit__segment f" state="false"></span>
-                                <span class="digital__display__clock__digit__segment b" state="false"></span>
-                            </div>
-                            <span class="digital__display__clock__digit__segment g" state="false"></span>
-                            <div class="digital__display__clock__digit__line">
-                                <span class="digital__display__clock__digit__segment e" state="false"></span>
-                                <span class="digital__display__clock__digit__segment c" state="false"></span>
-                            </div>
-                            <span class="digital__display__clock__digit__segment d" state="false"></span>
-                        </div>
+                        <digit-display></digit-display>
+                        <digit-display></digit-display>
                     </div>
                     <span class="digital__display__clock__separator"></span>
                     <div class="digital__display__clock__minutes">
-                        <div class="digital__display__clock__digit minutes__tens">
-                            <span class="digital__display__clock__digit__segment a" state="false"></span>
-                            <div class="digital__display__clock__digit__line">
-                                <span class="digital__display__clock__digit__segment f" state="false"></span>
-                                <span class="digital__display__clock__digit__segment b" state="false"></span>
-                            </div>
-                            <span class="digital__display__clock__digit__segment g" state="false"></span>
-                            <div class="digital__display__clock__digit__line">
-                                <span class="digital__display__clock__digit__segment e" state="false"></span>
-                                <span class="digital__display__clock__digit__segment c" state="false"></span>
-                            </div>
-                            <span class="digital__display__clock__digit__segment d" state="false"></span>
-                        </div>
-                        <div class="digital__display__clock__digit minutes__units">
-                            <span class="digital__display__clock__digit__segment a" state="false"></span>
-                            <div class="digital__display__clock__digit__line">
-                                <span class="digital__display__clock__digit__segment f" state="false"></span>
-                                <span class="digital__display__clock__digit__segment b" state="false"></span>
-                            </div>
-                            <span class="digital__display__clock__digit__segment g" state="false"></span>
-                            <div class="digital__display__clock__digit__line">
-                                <span class="digital__display__clock__digit__segment e" state="false"></span>
-                                <span class="digital__display__clock__digit__segment c" state="false"></span>
-                            </div>
-                            <span class="digital__display__clock__digit__segment d" state="false"></span>
-                        </div>
+                        <digit-display></digit-display>
+                        <digit-display></digit-display>
                     </div>
                 </div>
                 <div class="digital__display__date">
@@ -89,14 +45,14 @@
 
             <div class="digital__settings">
                 <div class="digital__settings__actions">
-                    <!-- <div class="digital__settings__actions__action">
+                    <div class="digital__settings__actions__action">
                         <ion-icon name="alarm-outline"></ion-icon>
                         <span>24h</span>
                     </div>
                     <div class="digital__settings__actions__action">
                         <ion-icon name="time-outline"></ion-icon>
                         <span>Numérique</span>
-                    </div> -->
+                    </div>
                     <div class="digital__settings__actions__action theme-switcher">
                         <ion-icon name=""></ion-icon>
                         <span></span>

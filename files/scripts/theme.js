@@ -1,4 +1,4 @@
-import { $, checkCookie, getCookie, setCookie } from "./min.js"
+import { $, $a, checkCookie, getCookie, setCookie } from "./min.js"
 
 const defaultTheme = "light"
 const cookieName = "color-scheme"
@@ -8,7 +8,7 @@ const icons = [ 'sunny-outline', 'moon-outline', 'leaf-outline', 'water-outline'
 const themeSwitcher = $(document, '.theme-switcher')
 
 
-setTheme(getTheme())
+window.addEventListener('load', () => { setTheme(getTheme()) })
 themeSwitcher.onclick = () => { setTheme(getNextTheme()) }
 
 
@@ -21,6 +21,9 @@ function setTheme(theme) {
 
     $(themeSwitcher, 'ion-icon').setAttribute('name', icons[ themeIndex ])
     $(themeSwitcher, 'span').innerText = translates[ themeIndex ]
+
+    $a(document, 'digit-display').forEach(dd => dd.displayTheme(getTheme(), theme))
+
     setCookie(cookieName, theme, 365)
 }
 
@@ -39,3 +42,5 @@ function getNextTheme() {
 function isValid(theme) {
     return themes.includes(theme)
 }
+
+export { getTheme }

@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.digit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.digit-line {
+  width: 14rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.segment {
+  width: 2rem;
+  opacity: .1;
+  height: 10rem;
+  display: block;
+  border-radius: 1rem;
+}
+
+.segment[state=true] {
+  opacity: 1;
+}
+
+.segment.a, .segment.g, .segment.d {
+  width: 10rem;
+  height: 2rem;
+}
+
+.light .segment {
+  background-color: #eb6464;
+}
+
+.light .digital {
+  background-color: #f8f8f8;
+}
+
+.light .digital__display__clock__digit__segment {
+  background-color: #eb6464;
+}
+
+.light .digital__display__clock__separator::before, .light .digital__display__clock__separator::after {
+  background-color: #eb6464;
+}
+
+.light .digital__display__date * {
+  color: #eb6464;
+}
+
+.light .digital__display__date__day-nbr {
+  color: #f8f8f8;
+  background-color: #eb6464;
+}
+
+.light .digital__settings__actions {
+  -webkit-box-shadow: 0 0 1.5rem 0 rgba(37, 37, 37, 0.25);
+          box-shadow: 0 0 1.5rem 0 rgba(37, 37, 37, 0.25);
+  background-color: #ffffff;
+}
+
+.light .digital__settings__actions__action {
+  color: #252525;
+}
+
+.light .digital__settings__actions__action::before {
+  background-color: #252525;
+}
+
+.light .digital__settings__toggle {
+  -webkit-box-shadow: 0 0 1.5rem 0 rgba(37, 37, 37, 0.25);
+          box-shadow: 0 0 1.5rem 0 rgba(37, 37, 37, 0.25);
+  background-color: #ffffff;
+}
+
+.light .digital__settings__toggle > ion-icon {
+  color: #252525;
+}
+
+.dark .segment {
+  background-color: #a053cf;
+}
+
+.dark .digital {
+  background-color: #252525;
+}
+
+.dark .digital__display__clock__digit__segment {
+  background-color: #a053cf;
+}
+
+.dark .digital__display__clock__separator::before, .dark .digital__display__clock__separator::after {
+  background-color: #a053cf;
+}
+
+.dark .digital__display__date * {
+  color: #a053cf;
+}
+
+.dark .digital__display__date__day-nbr {
+  color: #252525;
+  background-color: #a053cf;
+}
+
+.dark .digital__settings__actions {
+  -webkit-box-shadow: 0 0 1.5rem 0 rgba(160, 83, 207, 0.25);
+          box-shadow: 0 0 1.5rem 0 rgba(160, 83, 207, 0.25);
+  background-color: #171717;
+}
+
+.dark .digital__settings__actions__action {
+  color: #ffffff;
+}
+
+.dark .digital__settings__actions__action::before {
+  background-color: #ffffff;
+}
+
+.dark .digital__settings__toggle {
+  -webkit-box-shadow: 0 0 1.5rem 0 rgba(160, 83, 207, 0.25);
+          box-shadow: 0 0 1.5rem 0 rgba(160, 83, 207, 0.25);
+  background-color: #171717;
+}
+
+.dark .digital__settings__toggle > ion-icon {
+  color: #ffffff;
+}
+
+.nature .segment {
+  background-color: #ec923f;
+}
+
+.nature .digital {
+  background-color: #394b34;
+}
+
+.nature .digital__display__clock__digit__segment {
+  background-color: #ec923f;
+}
+
+.nature .digital__display__clock__separator::before, .nature .digital__display__clock__separator::after {
+  background-color: #ec923f;
+}
+
+.nature .digital__display__date * {
+  color: #ec923f;
+}
+
+.nature .digital__display__date__day-nbr {
+  color: #394b34;
+  background-color: #ec923f;
+}
+
+.nature .digital__settings__actions {
+  -webkit-box-shadow: 0 0 1.5rem 0 rgba(236, 146, 63, 0.25);
+          box-shadow: 0 0 1.5rem 0 rgba(236, 146, 63, 0.25);
+  background-color: #233720;
+}
+
+.nature .digital__settings__actions__action {
+  color: #ffffff;
+}
+
+.nature .digital__settings__actions__action::before {
+  background-color: #ffffff;
+}
+
+.nature .digital__settings__toggle {
+  -webkit-box-shadow: 0 0 1.5rem 0 rgba(236, 146, 63, 0.25);
+          box-shadow: 0 0 1.5rem 0 rgba(236, 146, 63, 0.25);
+  background-color: #233720;
+}
+
+.nature .digital__settings__toggle > ion-icon {
+  color: #ffffff;
+}
+
+.oceanic .segment {
+  background-color: #45b3e1;
+}
+
+.oceanic .digital {
+  background-color: #222249;
+}
+
+.oceanic .digital__display__clock__digit__segment {
+  background-color: #45b3e1;
+}
+
+.oceanic .digital__display__clock__separator::before, .oceanic .digital__display__clock__separator::after {
+  background-color: #45b3e1;
+}
+
+.oceanic .digital__display__date * {
+  color: #45b3e1;
+}
+
+.oceanic .digital__display__date__day-nbr {
+  color: #222249;
+  background-color: #45b3e1;
+}
+
+.oceanic .digital__settings__actions {
+  -webkit-box-shadow: 0 0 1.5rem 0 rgba(69, 179, 225, 0.25);
+          box-shadow: 0 0 1.5rem 0 rgba(69, 179, 225, 0.25);
+  background-color: #191940;
+}
+
+.oceanic .digital__settings__actions__action {
+  color: #ffffff;
+}
+
+.oceanic .digital__settings__actions__action::before {
+  background-color: #ffffff;
+}
+
+.oceanic .digital__settings__toggle {
+  -webkit-box-shadow: 0 0 1.5rem 0 rgba(69, 179, 225, 0.25);
+          box-shadow: 0 0 1.5rem 0 rgba(69, 179, 225, 0.25);
+  background-color: #191940;
+}
+
+.oceanic .digital__settings__toggle > ion-icon {
+  color: #ffffff;
+}
+
+.terminal .segment {
+  background-color: #a6e145;
+}
+
+.terminal .digital {
+  background-color: #000000;
+}
+
+.terminal .digital__display__clock__digit__segment {
+  background-color: #a6e145;
+}
+
+.terminal .digital__display__clock__separator::before, .terminal .digital__display__clock__separator::after {
+  background-color: #a6e145;
+}
+
+.terminal .digital__display__date * {
+  color: #a6e145;
+}
+
+.terminal .digital__display__date__day-nbr {
+  color: #000000;
+  background-color: #a6e145;
+}
+
+.terminal .digital__settings__actions {
+  -webkit-box-shadow: 0 0 1.5rem 0 rgba(123, 123, 123, 0.25);
+          box-shadow: 0 0 1.5rem 0 rgba(123, 123, 123, 0.25);
+  background-color: #070707;
+}
+
+.terminal .digital__settings__actions__action {
+  color: #ffffff;
+}
+
+.terminal .digital__settings__actions__action::before {
+  background-color: #ffffff;
+}
+
+.terminal .digital__settings__toggle {
+  -webkit-box-shadow: 0 0 1.5rem 0 rgba(123, 123, 123, 0.25);
+          box-shadow: 0 0 1.5rem 0 rgba(123, 123, 123, 0.25);
+  background-color: #070707;
+}
+
+.terminal .digital__settings__toggle > ion-icon {
+  color: #ffffff;
+}
+/*# sourceMappingURL=segments.css.map */

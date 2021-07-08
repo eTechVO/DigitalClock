@@ -5,6 +5,9 @@ $button: #171717;
 $shadow: 0 0 1.5rem 0 rgba(160, 83, 207, .25);
 
 .dark {
+    .segment { background-color: $main-color }
+
+    
     .digital {
         background-color: $background;
         &__display {

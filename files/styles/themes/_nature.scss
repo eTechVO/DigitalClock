@@ -5,6 +5,9 @@ $button: #233720;
 $shadow: 0 0 1.5rem 0 rgba(236, 146, 63, .25);
 
 .nature {
+    .segment { background-color: $main-color }
+
+    
     .digital {
         background-color: $background;
         &__display {

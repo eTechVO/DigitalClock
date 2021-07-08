@@ -22,7 +22,7 @@ function setTheme(theme) {
     $(themeSwitcher, 'ion-icon').setAttribute('name', icons[ themeIndex ])
     $(themeSwitcher, 'span').innerText = translates[ themeIndex ]
 
-    $a(document, 'digit-display').forEach(dd => dd.displayTheme(getTheme(), theme))
+    $a(document, 'digit-display').forEach(dd => dd.setAttribute('theme', theme))
 
     setCookie(cookieName, theme, 365)
 }
@@ -43,4 +43,8 @@ function isValid(theme) {
     return themes.includes(theme)
 }
 
-export { getTheme }
+function getDefaultTheme() {
+    return defaultTheme
+}
+
+export { getTheme, getDefaultTheme, isValid }

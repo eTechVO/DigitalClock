@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -53,10 +54,6 @@
   background-color: #f8f8f8;
 }
 
-.light .digital__display__clock__digit__segment {
-  background-color: #eb6464;
-}
-
 .light .digital__display__clock__separator::before, .light .digital__display__clock__separator::after {
   background-color: #eb6464;
 }
@@ -100,10 +97,6 @@
 
 .dark .digital {
   background-color: #252525;
-}
-
-.dark .digital__display__clock__digit__segment {
-  background-color: #a053cf;
 }
 
 .dark .digital__display__clock__separator::before, .dark .digital__display__clock__separator::after {
@@ -151,10 +144,6 @@
   background-color: #394b34;
 }
 
-.nature .digital__display__clock__digit__segment {
-  background-color: #ec923f;
-}
-
 .nature .digital__display__clock__separator::before, .nature .digital__display__clock__separator::after {
   background-color: #ec923f;
 }
@@ -200,10 +189,6 @@
   background-color: #222249;
 }
 
-.oceanic .digital__display__clock__digit__segment {
-  background-color: #45b3e1;
-}
-
 .oceanic .digital__display__clock__separator::before, .oceanic .digital__display__clock__separator::after {
   background-color: #45b3e1;
 }
@@ -247,10 +232,6 @@
 
 .terminal .digital {
   background-color: #000000;
-}
-
-.terminal .digital__display__clock__digit__segment {
-  background-color: #a6e145;
 }
 
 .terminal .digital__display__clock__separator::before, .terminal .digital__display__clock__separator::after {

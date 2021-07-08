@@ -38,33 +38,6 @@
                     border-radius: 50%;
                 }
             }
-
-            &__digit {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-
-                &__line {
-                    width: 14rem;
-                    display: flex;
-                    justify-content: space-between;
-                }
-
-                &__segment {
-                    width: 2rem;
-                    opacity: .1;
-                    height: 10rem;
-                    display: block;
-                    border-radius: 1rem;
-
-                    &[state=true] { opacity: 1 }
-    
-                    &.a, &.d, &.g {
-                        width: 10rem;
-                        height: 2rem;
-                    }
-                }
-            }
         }
 
         &__date {

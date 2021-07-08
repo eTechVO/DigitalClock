@@ -1,3 +1,4 @@
+import { isValid, getTheme } from './theme.js'
 import { $ } from './min.js'
 
 const segments = [ "a", "b", "c", "d", "e", "f", "g" ]
@@ -43,20 +44,30 @@ class Displayer extends HTMLElement {
     }
 
     connectedCallback() {
-        if (!this.getAttribute('number') || !converts[ this.getAttribute('number') ]) this.displayNumber(' ')
-        else this.displayNumber(this.getAttribute('number'))
-    }
-
-    displayNumber(number) {
-        const states = converts[ number ]
-        for (let i = 0; i < segments.length; i++) this.shadowRoot.querySelector('.' + segments[ i ]).setAttribute('state', states[ i ])
-        return number !== ' ' ? parseInt(number) : undefined
-    }
-
-    displayTheme(old, cur) {
+        if (!this.getAttribute('theme') || !isValid(this.getAttribute('theme'))) this.setAttribute('theme', getTheme())
+        if (!this.getAttribute('number') || !converts[ this.getAttribute('number') ]) this.setAttribute('number', ' ')
+        
         const digit = $(this.shadowRoot, '.digit')
-        digit.classList.remove(old)
-        digit.classList.add(cur)
+        digit.className = `digit ${getTheme()}`
+        const c = converts[ this.getAttribute('number') ]
+        for (let i = 0; i < segments.length; i++) this.shadowRoot.querySelector('.' + segments[ i ]).setAttribute('state', c[ i ])
+
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === 'attributes') {
+                    switch (mutation.attributeName) {
+                        case 'number':
+                            const c = converts[ this.getAttribute('number') ]
+                            for (let i = 0; i < segments.length; i++) this.shadowRoot.querySelector('.' + segments[ i ]).setAttribute('state', c[ i ])
+                            break
+                        case 'theme':
+                            const theme = this.getAttribute('theme')
+                            digit.className = `digit ${theme}`
+                    }
+                }
+            })
+        })
+        observer.observe(this, { attributes: true })
     }
 }
 

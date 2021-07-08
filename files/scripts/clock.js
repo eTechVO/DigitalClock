@@ -53,5 +53,5 @@ function loadDate() {
     monthDisplay.innerText = month
     yearDisplay.innerText = year
 
-    for (let i = 0; i < digits.length; i++) { digits[ i ].displayNumber(time.charAt( i )) }
+    for (let i = 0; i < digits.length; i++) { digits[ i ].setAttribute('number', time.charAt( i )) }
 }

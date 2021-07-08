@@ -6,13 +6,10 @@ $shadow: 0 0 1.5rem 0 rgba(123, 123, 123, 0.25);
 
 .terminal {
     .segment { background-color: $main-color }
-
-    
     .digital {
         background-color: $background;
         &__display {
             &__clock {
-                &__digit__segment { background-color: $main-color }
                 &__separator {
                     &::before, &::after { background-color: $main-color }
                 }
